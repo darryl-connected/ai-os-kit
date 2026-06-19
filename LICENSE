@@ -1,0 +1,45 @@
+MIT License
+
+Copyright (c) 2026 Nate Herk (AIS-OS base kit)
+Copyright (c) 2026 Darryl Lim (skill additions, connector scripts, demo content)
+
+Original work: AIS-OS — https://github.com/nateherkai/AIS-OS
+Modifications: skill set expanded to 6 skills (added meeting-intake, gameplan,
+push-to-drive), harness adapter pattern introduced, connector script library
+bundled, demo project added, two-layer identity/operations split templated.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+TRADEMARK NOTICE
+================================================================================
+
+The Three Ms of AI™ and The Four Cs of an AIOS™ are trademarks of Nate Herk.
+Both frameworks ship in this kit via `references/3ms-framework.md` with full
+attribution intact. You may use these frameworks freely under MIT; you may not
+repackage or rebrand them as your own trademarks.
+
+================================================================================
+THIRD-PARTY ATTRIBUTIONS
+================================================================================
+
+This kit builds on Nate Herk's AIS-OS (MIT, © 2026). The 3Ms and Four Cs
+frameworks are included with attribution. The original kit's structure,
+intake wizard, and three core skills (onboard, audit, level-up) are derived
+from that work with modifications.

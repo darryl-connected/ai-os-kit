@@ -1,0 +1,57 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Secrets / credentials
+*.pem
+*.key
+*.json.cred
+token.json
+gmail_token.pickle
+google_drive_token.pickle
+google_calendar_token.pickle
+fathom_token.pickle
+clickup_token.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+
+# Node (for some harness tooling)
+node_modules/
+.npm
+.yarn
+
+# Build artifacts
+*.zip
+dist/
+build/
+
+# Harness-local state
+.claude/settings.local.json
+.pi/state/
+.cursor/
+
+# Vault scratch (not part of the kit, but common in cloned vaults)
+scratch/
