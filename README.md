@@ -167,3 +167,80 @@ The Three Ms of AI™ and The Four Cs of an AIOS™ are trademarks of Nate Herk.
 - `docs/SYNC.md` — cross-platform sync + migration (Windows ↔ Mac)
 - `references/skill-frontmatter.md` — YAML standard for `SKILL.md` files
 - `references/3ms-framework.md` — the operator brain
+
+---
+
+## Optional pi extensions (not bundled)
+
+These extensions are **worth knowing about** but are not shipped with the kit. Install manually if your workflow needs them.
+
+### `@gotgenes/pi-permission-system`
+
+A permission enforcement extension for pi that centralizes allow/ask/deny gates over tool, bash, MCP, skill, and special operations.
+
+**Install:**
+```bash
+pi install npm:@gotgenes/pi-permission-system
+```
+
+**Config:** `~/.pi/agent/extensions/pi-permission-system/config.json` (global) or `<cwd>/.pi/extensions/pi-permission-system/config.json` (project).
+
+**Why it's not bundled:** kit users run the agent with varying trust levels. The extension adds an `ask` prompt layer that slows routine supervised work but protects unattended runs. Each user decides their own risk appetite.
+
+**High-value gates if you do install:**
+- Cross-cutting `path` rule to deny `*.env`, `~/.ssh/*` for every tool at once
+- `external_directory: ask` to gate any access outside the working tree
+- Pattern-matched bash rules like `rm -rf *: deny`, `sudo *: ask`
+
+Minimal starter config:
+
+```jsonc
+{
+  "permission": {
+    "*": "allow",
+    "path": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      "~/.ssh/*": "deny"
+    },
+    "external_directory": "ask"
+  }
+}
+```
+
+Repo: <https://github.com/gotgenes/pi-packages/tree/main/packages/pi-permission-system>
+
+### `mattpocock/skills` (external skill reference)
+
+A public collection of well-built skills worth referencing when designing your own. Not bundled with this kit. Pull what you need on demand.
+
+**Install:**
+```bash
+npx skills@latest add mattpocock/skills
+```
+
+**Repo:** <https://github.com/mattpocock/skills>
+
+**Why it's not bundled:** skills are user-personal artifacts. Cherry-pick by use case rather than ship as a dependency.
+
+**Darryl's picks — what I keep installed:**
+
+I run 11 of Matt Pocock's skills alongside the 6 kit-bundled ones in my own vault. Of the full ~36 in his repo, these are the ones that fit an AIOS context with no engineering-repo shape assumed and no public-repo side effects:
+
+| Skill | What it does | When to reach for it |
+|---|---|---|
+| `ask-matt` | Router over the rest of Matt Pocock's skill set | First thing to install if you're new to his skills |
+| `find-skills` | Discover and install agent skills by use case | When you're looking for "is there a skill that does X?" |
+| `grilling` | Relentless interview to stress-test a plan before building | Pre-commit gate on any design or scope decision |
+| `grill-me` | Pure Socratic grilling mode | When you want to be challenged without producing docs |
+| `grill-with-docs` | Grilling that writes ADRs + glossary as it goes | When the decision is worth capturing for future-you |
+| `decision-mapping` | Markdown decision map for a planning effort | When a decision has several branches or stakeholders |
+| `handoff` | Compact a long session for another agent to pick up | End of session, or when switching contexts to a fresh AI. Review the output before sharing: redaction of API keys and credentials isn't bulletproof. |
+| `writing-shape` | Conversational drafting from raw notes to article | When you have notes and want help structuring |
+| `writing-beats` | Choose-your-own-adventure writing, beat by beat | When you have raw material and want narrative shape |
+| `writing-fragments` | Grilling session that mines you for raw writing fragments | When you want to develop ideas before imposing structure |
+| `writing-great-skills` | Reference for designing skills well | Read once before authoring your own |
+
+**Skip for kit use:** the rest assume an engineering repo (code modules, GitHub Issues, public posts, git hooks, or hardcoded Obsidian paths). Specifically: `codebase-design`, `diagnosing-bugs`, `domain-modeling`, `tdd`, `design-an-interface`, `edit-article`, `migrate-to-shoehorn`, `resolving-merge-conflicts`, `review`, `scaffold-exercises`, `setup-pre-commit`, `git-guardrails-claude-code`, `prototype`, `improve-codebase-architecture`, `setup-matt-pocock-skills`, `implement`, `qa`, `request-refactor-plan`, `to-issues`, `to-prd`, `triage`, `ubiquitous-language`, `/teach`, `obsidian-vault`.
