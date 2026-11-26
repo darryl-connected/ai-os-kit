@@ -23,6 +23,6 @@ User interviews, personas, surveys. Connects to discovery, onboarding design, sc
 - Survey length tolerance — 5 questions vs. 3?
 
 ## Related
-- [[README|Project hub]]
+- [Project hub](../README.md)
 - [[metrics]]
 - [[2026-06-15 - feature-spec]]

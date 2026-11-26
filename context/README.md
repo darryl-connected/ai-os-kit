@@ -1,13 +1,5 @@
-# Context
+# Profile context
 
-About you, your business, your priorities. Filled by `/onboard`.
+`context/about-me.md` is the home for stable role, team, project reference and optional working preferences. It is created only when the user saves facts. Onboarding reuses known information and does not overwrite an existing profile. The [optional template](../templates/IDENTITY.md) is available for manual setup, not a second copy of the profile.
 
-After running `/onboard`, this folder will contain:
-
-- `about-me.md` — identity, role, top_pain (from Q1 + Q7)
-- `about-business.md` — offer, ICP, revenue model (from Q1 + Q4)
-- `priorities.md` — quarterly priorities (from Q3)
-
-These files are read by `/gameplan`, `/audit`, `/level-up`, and the identity layer. Keep them fresh.
-
-If you run `/onboard` again with updated `aios-intake.md`, these files refresh and the originals are backed up to `archives/intake-{ts}/`.
+Keep current priorities and status with each project and connector scope in [connections.md](../connections.md). Do not copy these into personal instructions, intake or memory files. When starting a new task, read only the relevant context.

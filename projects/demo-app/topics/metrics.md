@@ -7,7 +7,7 @@ updated: 2026-06-17
 
 # Metrics
 
-Success metrics, KPIs, analytics. Connects to Q-priority tracking and `/weekly-exec-brief` patterns.
+Success metrics and analytics for Habit Tracker. Use the linked meetings and spec to compare agreed targets with current results.
 
 ## Meetings
 - 2026-06-15 — [[2026-06-15 - discovery-call]]
@@ -24,6 +24,6 @@ Success metrics, KPIs, analytics. Connects to Q-priority tracking and `/weekly-e
 - Analytics SDK choice (privacy-first constraint)
 
 ## Related
-- [[README|Project hub]]
+- [Project hub](../README.md)
 - [[user-research]]
 - [[2026-06-15 - feature-spec]]

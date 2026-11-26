@@ -1,12 +1,12 @@
 ---
 type: moc
 status: active
-updated: 2026-06-19
+date: 2026-06-19
 ---
 
-# Demo App — Habit Tracker
+# Demo app: Habit Tracker
 
-A generic fake mobile app for demoing the AIOS structure. **Delete this folder when you're ready** — it exists only to show the shape of a working project. Replace with your own.
+A fictional mobile app to show where project facts and reviewed notes live. Start your real work in a separate project folder. The example recording links are synthetic.
 
 ## What this project demonstrates
 
@@ -45,8 +45,7 @@ _(none yet)_
 1. **Read the meetings in order** (discovery → planning → retro) to see how frontmatter, Related sections, and canonical names look in practice.
 2. **Read the spec** to see how feature specs are structured.
 3. **Read the topic MOCs** to see how topics cross-link to meetings.
-4. **Delete this folder** when you have your own project to track.
 
-## How the demo was created
+## For a real project
 
-This folder was scaffolded manually to show the pattern. Real meetings would arrive via Fathom (auto-fetched to `inbox/`) and be filed by `/meeting-intake`. Specs and MOCs are written by hand.
+Record current status here or in a project note linked here. Save the full original meeting capture separately and link to it from the short project summary. Use [meeting intake](../../inbox/README.md) to review a supplied capture or one saved from Fathom on request. Topic links are optional.

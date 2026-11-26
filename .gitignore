@@ -1,7 +1,7 @@
 # Environment
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 
 # Secrets / credentials
 *.pem
@@ -53,5 +53,9 @@ build/
 .pi/state/
 .cursor/
 
-# Vault scratch (not part of the kit, but common in cloned vaults)
+# Local drafts and raw captures may contain sensitive work data.
 scratch/
+/inbox/*.md
+!/inbox/README.md
+/inbox/processed/*.md
+!/inbox/processed/README.md
